@@ -5,7 +5,7 @@ LABEL maintainer="yyoshiki41@gmail.com"
 ENV ALEMBIC_VERSION='1.0.8'
 
 RUN apk add --no-cache --update \
-    gcc python3-dev libmysqlclient-dev
+    gcc python3-dev mariadb-connector-c
 RUN pip install --no-cache-dir alembic==$ALEMBIC_VERSION
 
 ENTRYPOINT ["alembic"]
